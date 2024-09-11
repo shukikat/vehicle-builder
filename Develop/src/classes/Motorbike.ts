@@ -42,10 +42,30 @@ class Motorbike extends Vehicle {
     }
   }
 
+  Wheelie(): void  {
+    console.log(`Motorbike ${this.make}${this.model} is doing a wheelie!`)
+    
+  }
+
   override printDetails(): void {
     super.printDetails();
+    this.motorBikeInfo(); //records data for motorBike info
 
   }
+
+  motorBikeInfo(): void {
+    console.log(`VIN: ${this.vin}`);
+    console.log(`Color: ${this.color}`);
+    console.log(`Make: ${this.make}`);
+    console.log(`Model: ${this.model}`);
+    console.log(`Year: ${this.year}`);
+    console.log(`Weight: ${this.weight} lbs`);
+    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(`Wheels: ${this.wheels.length}`)
+
+  }
+
+ 
 
 
   }
