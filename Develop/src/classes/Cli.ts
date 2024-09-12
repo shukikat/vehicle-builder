@@ -312,8 +312,8 @@ class Cli {
         },
       ])
       .then((answers) => {
-        if (answers.vehicleToTow instanceof Truck) {
-          console.log("This truck cannot tow cannot tow itself");
+        if (x.vin===answers.vehicleToTow.vin) {
+          console.log("This truck cannot tow itself");
           this.performActions();  
 
         }
