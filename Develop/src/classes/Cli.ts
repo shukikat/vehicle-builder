@@ -413,12 +413,12 @@ class Cli {
           }
         }
         //tinkering with this code
-        else if (answers.action==='Tow') {
-        if (this.selectedVehicleVin==='Truck'){
-        for (let i=0; i < this.vehicles.length; i++){
-        this.findVehicletoTow(this.selectedVehicleVin)
-        return; }}
-        }
+        // else if (answers.action==='Tow') {
+        // if (this.selectedVehicleVin==='Truck'){
+        // for (let i=0; i < this.vehicles.length; i++){
+        // this.findVehicletoTow(this.selectedVehicleVin)
+        // return; }}
+        // }
 
 
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
