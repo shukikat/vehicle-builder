@@ -10,12 +10,12 @@ class Cli {
   // TODO: update the vehicles property to accept Truck and Motorbike objects as well
   // TODO: You will need to use the Union operator to define additional types for the array
   // TODO: See the AbleToTow interface for an example of how to use the Union operator
-  vehicles: (Car)[];
+  vehicles: (Car|Truck|Motorbike)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
   // TODO: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: (Car)[]) {
+  constructor(vehicles: (Car|Truck|Motorbike)[]) {
     this.vehicles = vehicles;
   }
 
@@ -319,7 +319,7 @@ class Cli {
         }
 
         else {
-          this.tow(answers.vehicleToTow); 
+          x.tow(answers.vehicleToTow); 
           this.performActions(); 
         }
         // TODO: check if the selected vehicle is the truck
@@ -346,6 +346,8 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
+            'Tow', //added this not sure it's correct placement
+            'Wheelie', //added this not sure it's correct placement
             'Select or create another vehicle',
             'Exit',
           ],
@@ -410,6 +412,15 @@ class Cli {
             }
           }
         }
+        //tinkering with this code
+        else if (answers.action==='Tow') {
+        if (this.selectedVehicleVin==='Truck'){
+        for (let i=0; i < this.vehicles.length; i++){
+        this.findVehicletoTow(this.selectedVehicleVin)
+        return; }}
+        }
+
+
         // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
         else if (answers.action === 'Select or create another vehicle') {
