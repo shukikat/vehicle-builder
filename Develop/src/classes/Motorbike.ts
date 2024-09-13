@@ -13,6 +13,7 @@ class Motorbike extends Vehicle {
   weight: number;
   topSpeed: number;
   wheels: Wheel[];
+  static Wheelie: any;
 
   constructor(
     vin: string,
