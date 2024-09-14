@@ -312,6 +312,7 @@ class Cli {
         },
       ])
       .then((answers) => {
+        
         if (x.vin===answers.vehicleToTow.vin) {
           console.log("This truck cannot tow itself");
           this.performActions();  
