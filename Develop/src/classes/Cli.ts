@@ -309,6 +309,7 @@ class Cli {
               value: vehicle,
             };
           }),
+           
         },
       ])
       .then((answers) => {
