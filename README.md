@@ -21,7 +21,7 @@ To run this project:
 - Upon running `npm start` the Node application is initiated and series of prompts is presented. Follow the instructions to make applicable     selections, inputs, and actions. 
 - Select action "Exit" to exit out of the application.  
 
-[Demo of vehicle-builder app]() 
+[Demo of vehicle-builder app](https://drive.google.com/file/d/1YbMjvRgDCV-Xu6tX-1WXAHMwcaHMvMOP/view) 
 
 ## License
 
